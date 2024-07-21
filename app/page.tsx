@@ -1,25 +1,22 @@
 import Photo from "@/components/Photo";
 import Socials from "@/components/Socials";
-import Stats from "@/components/Stats";
-
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 
-export default function Home() {
+const Home = () => {
   return (
-    <section className="h-screen xl:pt-[125px] pt-[100px]">
+    <section className="h-[85vh]">
       <div className="container mx-auto h-full">
-        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
+        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-12 xl:pb-10">
           <div className="text-center xl:text-left">
             <span>Software Developer</span>
-            <h1 className="h1">
-              Hello {`I'm`} <br /> <span>Matoi Decode</span>
+            <h1 className="text-4xl xl:text-6xl font-bold mt-4">
+              Hello, I'm <br /> Matoi Decode
             </h1>
-            <p className="max-w-[500px] mb-9 text-white/80">
-              I excel at crafting elegant digital experiences and I am
-              proficient in various programming languages and technologies
+            <p className="max-w-[500px] mt-6 text-gray-400">
+              I excel at crafting elegant digital experiences and am proficient in various programming languages and technologies.
             </p>
-            <div className="flex flex-col xl:flex-row items-center gap-8">
+            <div className="flex flex-col xl:flex-row items-center mt-8 gap-8">
               <Button
                 variant="outline"
                 size="lg"
@@ -41,7 +38,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Stats />
     </section>
   );
-}
+};
+
+export default Home;

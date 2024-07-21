@@ -28,7 +28,7 @@ const Photo = () => {
             fill
             alt="Home"
             className="object-contain"
-          ></Image>
+          />
         </motion.div>
         <motion.svg
           className="w-[200px] xl:w-[406px] h-[200px] xl:h-[406px]"
