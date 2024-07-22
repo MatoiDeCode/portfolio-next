@@ -1,13 +1,6 @@
 "use client";
 
-import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaNodeJs,
-  FaJava,
-} from "react-icons/fa";
+import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
 
 import { SiTailwindcss, SiNextdotjs, SiTypescript } from "react-icons/si";
 
@@ -23,6 +16,8 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 import { motion } from "framer-motion";
+
+import Link from "next/link";
 
 const about = {
   title: "About me",
@@ -49,10 +44,6 @@ const about = {
       fieldValue: "matoidecode@gmail.com",
     },
     {
-      fieldName: "Freelance",
-      fieldValue: "Not Available",
-    },
-    {
       fieldName: "Languages",
       fieldValue: "English, Indonesia",
     },
@@ -66,34 +57,42 @@ const skills = {
     {
       icon: <FaHtml5 />,
       name: "HTML 5",
+      link: "https://web.dev/learn/html",
     },
     {
       icon: <FaCss3 />,
       name: "CSS 3",
+      link: "https://web.dev/learn/css",
     },
     {
       icon: <SiTailwindcss />,
       name: "Tailwind CSS",
+      link: "https://tailwindcss.com",
     },
     {
       icon: <FaJs />,
       name: "JavaScript",
+      link: "https://web.dev/learn/javascript",
     },
     {
       icon: <SiTypescript />,
       name: "TypeScript",
+      link: "https://typescriptlang.org",
     },
     {
       icon: <FaReact />,
       name: "React JS",
+      link: "https://react.dev",
     },
     {
       icon: <FaNodeJs />,
       name: "Node JS",
+      link: "https://nodejs.org",
     },
     {
       icon: <SiNextdotjs />,
       name: "Next JS",
+      link: "https://nextjs.org",
     },
   ],
 };
@@ -111,8 +110,12 @@ const Resume = () => {
       <div className="container mx-auto">
         <Tabs defaultValue="about" className="flex flex-col xl:flex-row gap-14">
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-5">
-            <TabsTrigger value="about">About Me</TabsTrigger>
-            <TabsTrigger value="skills">Skills</TabsTrigger>
+            <TabsTrigger value="about" className="rounded-xl">
+              About Me
+            </TabsTrigger>
+            <TabsTrigger value="skills" className="rounded-xl">
+              Skills
+            </TabsTrigger>
           </TabsList>
           <div className="min-h-[70vh] w-full">
             <TabsContent
@@ -147,15 +150,16 @@ const Resume = () => {
                     {skills.desc}
                   </p>
                 </div>
+                <div className="flex xl:justify-start justify-center">
                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-7">
                   {skills.skillList.map((item, index) => {
                     return (
                       <li key={index}>
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
-                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                            <TooltipTrigger className="w-[100px] h-[100px] bg-[#232329] rounded-xl flex justify-center items-center group">
                               <div className="text-6xl group-hover:text-accent transition-all duration-300">
-                                {item.icon}
+                                <Link href={item.link} target="_blank">{item.icon}</Link>
                               </div>
                             </TooltipTrigger>
                             <TooltipContent>
@@ -167,6 +171,7 @@ const Resume = () => {
                     );
                   })}
                 </ul>
+                </div>
               </div>
             </TabsContent>
           </div>
