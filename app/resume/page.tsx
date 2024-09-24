@@ -21,7 +21,7 @@ import Link from "next/link";
 
 const about = {
   title: "About me",
-  desc: "Hi, I'm Muhammad Syamsu Niam, also known as Tomiodecode, from Madiun. I'm a passionate coder who loves exploring new technologies and solving problems. Let's connect and create something amazing together!",
+  desc: "Hi, I'm Muhammad Syamsu Ni'am, also known as Tomiodecode, from Madiun. I'm a passionate coder who loves exploring new technologies and solving problems. Let's connect and create something amazing together!",
   info: [
     {
       fieldName: "Name",
