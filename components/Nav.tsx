@@ -15,15 +15,7 @@ const links = [
   {
     name: "Resume",
     path: "/resume",
-  },
-  {
-    name: "Work",
-    path: "/work",
-  },
-  {
-    name: "Contact",
-    path: "/contact",
-  },
+  }
 ];
 
 const Nav = () => {

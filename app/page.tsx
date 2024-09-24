@@ -11,7 +11,7 @@ const Home = () => {
           <div className="text-center xl:text-left">
             <span>Software Developer</span>
             <h1 className="text-4xl xl:text-6xl font-bold mt-4">
-              Hello, Im <br /> Matoi Decode
+              Hello, Im <br /> Tomio Decode
             </h1>
             <p className="max-w-[500px] mt-6 text-gray-400">
               I excel at crafting elegant digital experiences and am proficient in various programming languages and technologies.
